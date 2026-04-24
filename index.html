@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bryan's Cafe</title>
+
+    <link rel="stylesheet" href="css/template.css">
+    <link rel="stylesheet" href="css/hamburgerMenu.css">
+    <link rel="stylesheet" href="css/content.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="mobileMenuContainer">
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+
+            <div class="mobileMenu" id="mobileMenu">
+                <ul>
+                    <li><a href="index.html">About</a></li>
+                    <li><a href="menu.html">Menu</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <nav>
+            <a href="index.html">
+                <img id="logo" src="images/logo.png" alt="Logo">
+            </a>
+
+            <ul class="nav">
+                <li><a class="nav-link" href="index.html">About</a></li>
+                <li><a class="nav-link" href="menu.html">Menu</a></li>
+                <li><a class="nav-link" href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+
+        <div class="mainWrapper">
+            <main>
+
+                <div class="container-fluid mb-3 heroBanner">
+                    <img class="banner" src="images/banner.png" alt="Bryan's Cafe Banner">
+                </div>
+
+                <div class="row mt-4 align-items-center sectionRow">
+                    <div class="col-md-4 text-center">
+                        <img class="photo" src="images/location1.jpg" alt="About Image">
+                    </div>
+
+                    <div class="col-md-8 about">
+                        <h3>ABOUT US</h3>
+
+                        <p>
+                            Bryan's Cafe is a welcoming neighbourhood cafe that brings together quality coffee, fresh
+                            meals, and friendly service in a relaxed setting. We want every visit to feel easy and
+                            enjoyable, whether you are stopping in for a quick takeaway drink or sitting down with
+                            family, friends, or colleagues.
+                        </p>
+
+                        <p>
+                            Our menu is prepared with a focus on fresh ingredients, balanced flavours, and reliable
+                            quality across breakfast, lunch, snacks, and drinks. From barista-made coffee to light
+                            meals and refreshing beverages, we aim to offer options that are simple, satisfying, and
+                            made with care.
+                        </p>
+
+                        <p>
+                            Bryan's Cafe is designed to be clean, comfortable, and convenient for everyday customers.
+                            We value approachable service, a welcoming atmosphere, and a space where people can catch
+                            up, take a break, or enjoy a consistent cafe experience throughout the day.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="row mt-5 align-items-center sectionRow historyRow">
+                    <div class="col-md-8 about">
+                        <h3>OUR HISTORY</h3>
+
+                        <p>
+                            Bryan's Cafe began with a simple idea: create a local cafe that people could rely on for
+                            good coffee, fresh food, and genuine service. What started as a small business focused on
+                            everyday quality quickly became a place where customers could feel comfortable returning
+                            again and again.
+                        </p>
+
+                        <p>
+                            As the cafe grew, we continued to refine our menu, improve our service, and respond to what
+                            customers valued most. That steady growth helped Bryan's Cafe build a reputation as a
+                            dependable place for casual dining, friendly interactions, and a welcoming community
+                            atmosphere.
+                        </p>
+
+                        <p>
+                            Today, Bryan's Cafe continues to move forward while staying true to the values it was built
+                            on: consistency, freshness, hospitality, and care for the customer experience. Our history
+                            shapes the way we serve today, and it continues to guide the future of our cafe.
+                        </p>
+                    </div>
+
+                    <div class="col-md-4 text-center">
+                        <img class="photo" src="images/ourhistory.jpg" alt="History Image">
+                    </div>
+                </div>
+
+            </main>
+        </div>
+
+        <footer class="m-3">
+            &copy; <span id="currentYear"></span> Bryan's Cafe |
+            <a href="privacyPolicy.html" target="_blank">Privacy Policy</a>
+        </footer>
+
+    </div>
+
+    <script>
+        document.getElementById("currentYear").innerText = new Date().getFullYear();
+    </script>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("mobileMenu").classList.toggle("active");
+        }
+    </script>
+</body>
+
+</html>

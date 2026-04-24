@@ -1,0 +1,85 @@
+/***********************************************************
+* Comment:
+* Author:
+* Date created:
+***********************************************************/
+
+/* ================= HAMBURGER BUTTON ================= */
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 30px;
+    height: 3px;
+    background-color: var(--cfWhite);
+    margin: 5px 0;
+    transition: 0.3s;
+}
+
+/* ================= MOBILE MENU ================= */
+
+.mobileMenu {
+    display: none;
+    background-color: var(--cfDarkPink);
+    width: 220px;
+    text-align: center;
+    position: absolute;
+    top: calc(100% + 0.75rem);
+    right: 0;
+    border-radius: 18px;
+    box-shadow: 0 18px 40px rgba(20, 31, 41, 0.24);
+    overflow: hidden;
+}
+
+.mobileMenu ul {
+    list-style: none;
+    padding: 0;
+}
+
+.mobileMenu li {
+    padding: 15px;
+}
+
+.mobileMenu a {
+    color: var(--cfWhite);
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+/* ================= ACTIVE MENU ================= */
+
+.mobileMenu.active {
+    display: block;
+}
+
+/* ================= MOBILE ONLY ================= */
+
+@media (max-width: 768px) {
+
+    .mobileMenuContainer {
+        position: fixed;
+        top: 1rem;
+        right: 1rem;
+        z-index: 20;
+    }
+
+    /* Show hamburger */
+    .hamburger {
+        display: block;
+    }
+
+    /* Hide normal nav */
+    nav ul {
+        display: none;
+    }
+
+    /* Center nav */
+    nav {
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+    }
+}
